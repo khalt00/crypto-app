@@ -31,9 +31,7 @@ a:hover {
   flex: 0.8;
   width: 100%;
 }
-.routes {
-  padding: 20px;
-}
+
 .nav-container {
   position: fixed;
   left: 0;
@@ -89,6 +87,13 @@ a:hover {
   .main {
     margin-left: 100px;
   }
+}
+
+.routes {
+  margin: 15px auto;
+  padding: 20px;
+  padding-left: 10rem;
+  position: relative;
 }
 
 @media screen and (max-width: 800px) {
@@ -374,5 +379,4 @@ a:hover {
   flex-direction: column;
   padding: 20px;
   align-items: center;
-  color: #d9d9d9;
 }
