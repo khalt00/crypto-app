@@ -1,22 +1,22 @@
-.home__container {
-}
-
 .col {
-  background-color: rgb(255, 255, 255);
 }
 .row {
   margin: 10px;
 }
-p {
+
+.stats__title {
   font-family: "Times New Roman", Times, serif;
-  font-weight: -100;
+  font-weight: bold;
   padding-bottom: 2px;
   font-size: 15px;
-  height: 10px;
+  height: 6px;
+  text-transform: uppercase;
+  color: gray;
+  opacity: 0.9;
 }
-.coin__stats {
-  padding: 10px;
-}
+
 .stats__value {
   font-weight: 500;
+  padding-left: 12px;
+  font-size: 25px;
 }

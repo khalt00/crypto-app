@@ -18,44 +18,48 @@ function HomePage() {
           <div className="title">
             <h2>Global stats</h2>
           </div>
-          <div className="row">
+          <div className="row the__row">
             <div className="col col-sm-12 col-md-6 col-lg-6 ">
-              <p className="">Total Cryptocurrencies:</p>
+              <p className="stats__title">Total Cryptocurrencies:</p>
               <div className="stats__value">{millify(globalStats?.total)}</div>
             </div>
             <div className="col col-sm-12 col-md-6 col-lg-6">
-              <p className="text-left">Total Exchanges:</p>
+              <p className="stats__title">Total Exchanges:</p>
               <div className="stats__value">
                 {millify(globalStats.totalExchanges)}
               </div>
             </div>
             <div className="col col-sm-12 col-md-6 col-lg-6 ">
-              <p>Total MarketCap:</p>
+              <p className="stats__title">Total MarketCap:</p>
               <div className="stats__value">
                 {millify(globalStats.totalMarketCap)}
               </div>
             </div>
             <div className="col col-sm-12 col-md-6 col-lg-6 ">
-              <p>Total 24h Volume:</p>
+              <p className="stats__title">Total 24h Volume:</p>
 
               <div className="stats__value">
                 {millify(globalStats.total24hVolume)}
               </div>
             </div>
             <div className="col col-sm-12 col-md-6 col-lg-6 ">
-              <p>Total Cap:</p>
+              <p className="stats__title">Total Cap:</p>
               <div className="stats__value">{globalStats.total}</div>
             </div>
             <div className="col col-sm-12 col-md-6 col-lg-6 ">
-              <p>Total Market:</p>
+              <p className="stats__title">Total Market:</p>
               <div className="stats__value">
                 {millify(globalStats.totalMarkets)}
               </div>
             </div>
           </div>
         </div>
-        <div className="top__currencies"></div>
-        <div className="top__news"></div>
+        <div className="top__currencies">
+          <Currencies simplified />
+        </div>
+        <div className="top__news">
+          <News simplified />
+        </div>
       </div>
 
       {/* <Title level={2} className="heading">

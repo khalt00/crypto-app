@@ -4,7 +4,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
-    <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar">
+    <div className=" d-flex flex-column flex-shrink-0 p-3 text-white bg-dark position-fixed sidebar">
       <div className="logo-container">
         <a className="navbar-brand" href="#">
           <img

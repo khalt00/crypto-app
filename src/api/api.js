@@ -10,7 +10,6 @@ const createRequest = (url) => ({
   url,
   Headers: cryptoHeaders,
 });
-
 const key = process.env.REACT_APP_RAPIDAPI_KEY;
 const baseUrl = process.env.REACT_APP_CRYPTO_API_URL;
 export const cryptoApi = createApi({
