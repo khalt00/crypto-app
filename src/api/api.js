@@ -1,3 +1,4 @@
+import create from "@ant-design/icons/lib/components/IconFont";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const cryptoHeaders = {
@@ -19,11 +20,19 @@ export const cryptoApi = createApi({
   }),
   endpoints: (builder) => ({
     getCrypto: builder.query({
-      query: () => createRequest(`/coins?rapidapi-key=${key}`),
+      query: (count) =>
+        createRequest(`/coins?rapidapi-key=${key}&limit=${count}`),
     }),
     getExchanges: builder.query({
       query: () => createRequest(`/exchanges?rapidapi-key=${key}`),
     }),
+    getCryptoDetail: builder.query({
+      query: (id) => createRequest(`/coin/${id}?rapidapi-key=${key}`),
+    }),
   }),
 });
-export const { useGetCryptoQuery, useGetExchangesQuery } = cryptoApi;
+export const {
+  useGetCryptoQuery,
+  useGetExchangesQuery,
+  useGetCryptoDetailQuery,
+} = cryptoApi;

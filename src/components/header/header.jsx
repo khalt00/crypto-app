@@ -1,42 +1,47 @@
 import icon from "../../images/cryptocurrency.png";
 import React, { useState, useEffect } from "react";
-import { Button, Menu, Typography, Avatar } from "antd";
+import "./style.css";
 import { Link } from "react-router-dom";
-import {
-  HomeOutlined,
-  MoneyCollectOutlined,
-  BulbOutlined,
-  FundOutlined,
-  MenuOutlined,
-} from "@ant-design/icons";
 function Navbar() {
-  const items = [
-    {
-      icon: <HomeOutlined />,
-      label: <Link to="/HomePage">Home</Link>,
-    },
-    {
-      icon: <MoneyCollectOutlined />,
-      label: <Link to="/Currencies">Cryptocurrencies</Link>,
-    },
-    {
-      icon: <BulbOutlined />,
-      label: <Link to="/Exchanges">Exchanges</Link>,
-    },
-    { icon: <FundOutlined />, label: <Link to="/News">News</Link> },
-  ];
   return (
-    <div className="nav-container">
+    <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar">
       <div className="logo-container">
-        <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo">
-          <Link to="/">Cryptoverse</Link>
-        </Typography.Title>
-        <Button className="menu-control-container">
-          <MenuOutlined />
-        </Button>
+        <a className="navbar-brand" href="#">
+          <img
+            src={icon}
+            alt="logo"
+            className="logo__img d-inline-block align-text-left "
+          />
+          Cryptoverse
+        </a>
       </div>
-      <Menu items={items} theme="dark"></Menu>
+      <hr></hr>
+      <div className="nav nav-pills flex-column mb-auto">
+        <div className="nav-item">
+          <Link className="nav-link" to="/">
+            <i className="bi bi-house"></i>
+            Home
+          </Link>
+        </div>
+
+        <div className="nav-item">
+          <Link className="nav-link" to="/Currencies">
+            <i className="bi bi-currency-bitcoin"></i>
+            Currencies
+          </Link>
+        </div>
+
+        <div className="nav-item">
+          <Link className="nav-link" to="/Exchanges">
+            <i className="bi bi-currency-exchange"></i>Exchange
+          </Link>
+        </div>
+        <div className="nav-item">
+          <Link className="nav-link" to="/News">
+            <i className="bi bi-currency-exchange"></i>News
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
