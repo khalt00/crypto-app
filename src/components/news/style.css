@@ -1,0 +1,16 @@
+/* .news__logo {
+  height: 120px;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 120px;
+  max-height: 120px;
+} */
+
+.news__first {
+  padding-left: 2rem;
+}
+
+.news__select {
+  width: 10rem;
+}

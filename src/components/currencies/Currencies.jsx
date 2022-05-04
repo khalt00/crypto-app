@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { useGetCryptoQuery } from "../../api/api";
-import { Col, Row, Card, Input } from "antd";
+
 import { Link } from "react-router-dom";
 import "./style.css";
 import millify from "millify";
@@ -40,25 +40,30 @@ export default function Currencies({ simplified }) {
       <div className="row">
         {cryptos?.map((currency) => (
           <div className="col p-3 col-lg-3 col-md-4 col-sm-12">
-            <div class="card">
-              <div class="card-body">
-                <img
-                  class="card-img-right card__logo d-inline"
-                  src={currency?.iconUrl}
-                  alt="Card image cap"
-                />
-                <h5 class="card-title d-inline px-2">{currency?.name}</h5>
+            <Link
+              to={`detail/${currency.uuid}`}
+              style={{ textDecoration: "none" }}
+            >
+              <div className="card" key={currency?.uuid}>
+                <div className="card-body">
+                  <img
+                    className="card-img-right card__logo d-inline"
+                    src={currency?.iconUrl}
+                    alt="Card cap"
+                  />
+                  <h5 className="card-title d-inline px-2">{currency?.name}</h5>
 
-                <hr></hr>
-                <p class="card-text">Price: {millify(currency?.price)}</p>
-                <p class="card-text">
-                  Market cap:{millify(currency?.marketCap)}
-                </p>
-                <p class="card-text">
-                  Price change:{millify(currency?.change)}
-                </p>
+                  <hr></hr>
+                  <p className="card-text">Price: {millify(currency?.price)}</p>
+                  <p className="card-text">
+                    Market cap:{millify(currency?.marketCap)}
+                  </p>
+                  <p className="card-text">
+                    Price change:{millify(currency?.change)}
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

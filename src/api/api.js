@@ -1,9 +1,8 @@
-import create from "@ant-design/icons/lib/components/IconFont";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const cryptoHeaders = {
-  "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
-  "X-RapidAPI-Key": "1261296db0msh880c71a5646648ep1cc2c3jsnc64b18b84626",
+  "X-RapidAPI-Host": process.env.REACT_APP_CRYPTO_API_URL,
+  "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPI_KEY,
 };
 
 const createRequest = (url) => ({

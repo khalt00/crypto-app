@@ -55,9 +55,22 @@ function HomePage() {
           </div>
         </div>
         <div className="top__currencies">
+          <h1>Top 10 Currencies</h1>
+          <div className="show__more">
+            <Link to={"/Currencies"} style={{ textDecoration: "none" }}>
+              <h2 style={{ color: "aqua" }}>Show more</h2>
+            </Link>
+          </div>
           <Currencies simplified />
         </div>
+
         <div className="top__news">
+          <h1>Latest Crypto News</h1>
+          <div className="show__more">
+            <Link to={"/News"} style={{ textDecoration: "none" }}>
+              <h2 style={{ color: "aqua" }}>Show more</h2>
+            </Link>
+          </div>
           <News simplified />
         </div>
       </div>

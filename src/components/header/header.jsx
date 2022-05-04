@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className=" d-flex flex-column flex-shrink-0 p-3 text-white bg-dark position-fixed sidebar">
       <div className="logo-container">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <img
             src={icon}
             alt="logo"

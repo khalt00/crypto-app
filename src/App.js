@@ -8,8 +8,7 @@ import {
   News,
   Detail,
 } from "./components";
-import { Routes, Route, Link } from "react-router-dom";
-import { Layout } from "antd";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
