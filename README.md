@@ -1,6 +1,6 @@
 # Project xem crypto currency
 
-- Install react 17 to run the project
+- npm install
 - use "npm start" to start the project
 
 
